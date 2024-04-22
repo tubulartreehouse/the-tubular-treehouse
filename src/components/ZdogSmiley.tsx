@@ -10,7 +10,7 @@ const ZdogSmiley = () => {
         const illo = new Illustration({
             element: illustrationRef.current ?? '',
             dragRotate: true,
-            zoom: 4,
+            zoom: 2,
         });
 
         // Face
