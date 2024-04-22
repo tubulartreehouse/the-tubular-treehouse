@@ -8,7 +8,7 @@ const ZdogSmiley = () => {
 
     useEffect(() => {
         const illo = new Illustration({
-            element: illustrationRef.current,
+            element: illustrationRef.current ?? '',
             dragRotate: true,
             zoom: 4,
         });
