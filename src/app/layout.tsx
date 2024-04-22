@@ -1,8 +1,25 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header/header";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const playFairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+  //👇 Add variable to our object
+  variable: '--font-playfair-display',
+})
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  display: 'swap',
+  //👇 Add variable to our object
+  variable: '--font-raleway',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +32,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html 
+      lang="en"
+      className={`${playFairDisplay.className} ${raleway.className}`}
+    >
+      <body>
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <footer className="bg-gray-800 text-white text-center p-4">
+            © {new Date().getFullYear()} Joel Barkley. All rights reserved.
+          </footer>
+        </div>
+      </body>
     </html>
   );
 }
