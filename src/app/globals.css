@@ -29,3 +29,16 @@ h1 {
     text-wrap: balance;
   }
 }
+
+@keyframes hover-effect {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hovering-image {
+  animation: hover-effect 3s ease-in-out infinite;
+}
