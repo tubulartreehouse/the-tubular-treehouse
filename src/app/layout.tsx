@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import { Raleway } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,15 +33,14 @@ export default function RootLayout({
   return (
     <html 
       lang="en"
-      className={`${playFairDisplay.className} ${raleway.className}`}
+      className={`${playFairDisplay.className}`}
     >
-      <body>
-        <div className="flex flex-col min-h-screen">
-          <Header />
+      <body className="bg-backgroundOuter">
+        <div className="bg-backgroundInner m-6 flex flex-col min-h-screen">
           <main className="flex-grow">
             {children}
           </main>
-          <footer className="bg-gray-800 text-white text-center p-4">
+          <footer className=" text-textColor text-center p-4">
             © {new Date().getFullYear()} Joel Barkley. All rights reserved.
           </footer>
         </div>
