@@ -8,9 +8,8 @@ export default function Home() {
       <div className="flex flex-col md:flex-row items-center">
         <Image 
           src={'https://res.cloudinary.com/dcvehjjfy/image/upload/v1713804415/me_qp2tst.png'}
-          className="w-full md:w-auto"
           width={350}
-          height={350}
+          height={300}
           alt="hero-picture"
         />
         <span className="text-textColor text-center text-4xl md:text-5xl mt-4 md:mt-0 md:ml-4">
