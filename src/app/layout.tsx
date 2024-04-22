@@ -37,6 +37,11 @@ export default function RootLayout({
     >
       <body className="bg-backgroundOuter">
         <div className="bg-backgroundInner m-6 flex flex-col min-h-screen">
+          <h1 className="text-textColor m-6">
+            <i>
+              The Tubular Treehouse
+            </i>
+          </h1>
           <main className="flex-grow">
             {children}
           </main>

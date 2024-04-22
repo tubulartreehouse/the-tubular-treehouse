@@ -61,7 +61,7 @@ const ZdogSmiley = () => {
         // };
     }, []);
 
-    return <canvas ref={illustrationRef} width="200" height="200"></canvas>;
+    return (<canvas ref={illustrationRef} width="200" height="200"></canvas>);
 };
 
 export default ZdogSmiley;
