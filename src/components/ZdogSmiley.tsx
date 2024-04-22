@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { Illustration, Ellipse, Shape } from 'zdog';
 
 const ZdogSmiley = () => {
-    const illustrationRef = useRef();
+    const illustrationRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
         const illo = new Illustration({
